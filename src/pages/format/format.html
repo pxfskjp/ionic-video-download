@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Select Video Properties</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">First name</ion-label>
+      <ion-input [(ngModel)]="fileName" type="text" required placeholder="File name."></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Format</ion-label>
+      <ion-select [(ngModel)]="format" placeholder="Select video format" interface="popover" >
+        <ion-option value="mp4">MP4 Format</ion-option>
+        <ion-option value="mov">MOV Format</ion-option>
+        <ion-option value="mkv">MKV Format</ion-option>
+        <ion-option value="webm">WEBM Format</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Resolution</ion-label>
+      <ion-select [(ngModel)]="resolution" placeholder="Select video size." interface="popover">
+        <ion-option value="qcif">177x144</ion-option>
+        <ion-option value="qvga">320x240</ion-option>
+        <ion-option value="gif">352x288</ion-option>
+        <ion-option value="sif">384x288</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-toolbar>
+        <button ion-button color="primary" expand="block" (click)="dismiss()" expand="block" align-items-center>Cancel</button>
+        <button ion-button color="primary" expand="block" (click)="checkProperties()" expand="block">OK</button>
+    </ion-toolbar>
+  </ion-list>
+</ion-content>

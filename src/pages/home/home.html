@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-input [(ngModel)]="url" placeholder="Video URL" type="url" aria-expanded="true"></ion-input>
+    <ion-button (click)="checkURL()" expand="block" >
+      <ion-icon name="arrow-forward"></ion-icon>
+      <ion-ripple-effect></ion-ripple-effect>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list id="task-list">
+    <ion-list-header>
+      Downloading
+    </ion-list-header>
+
+    <ion-item *ngFor="let task of taskList">
+      <ion-thumbnail class="video-icon" item-start>
+        <ion-img src="assets/icon/dl-{{task.format}}}.png"></ion-img>
+      </ion-thumbnail>
+      <ion-label class="task-description">
+        <h2 class="title">{{task.fileName}}</h2>
+        <p class="bytes">{{task.getSize()}}</p>
+      </ion-label>
+      <ion-label class="task-status" >
+        <p class="percent">{{task.percent}}%</p>
+      </ion-label>
+      <ion-button color="danger">
+        <ion-icon name="close" (click)="abortDownload(task.fileName)"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+    </ion-item>
+    <ion-item *ngIf="taskList.length==0">
+      <ion-note expand="block">No download Task.</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-list id="video-list">
+    <ion-list-header>
+      Imported
+    </ion-list-header>
+    <ion-item *ngFor="let video of videoList">
+      <ion-thumbnail slot="start">
+        <ion-img src="assets/icon/vd-{{video.format}}}.png"></ion-img>
+      </ion-thumbnail>
+      <ion-label class="video-name">
+        <h3>{{video.fileName}}</h3>
+        <p>{{video.getDuration()}}</p>
+      </ion-label>
+      <ion-label extend="full" class="video-description">
+        <p>{{video.getDuration()}}</p>
+        <p>{{video.getSize()}}</p>
+      </ion-label>
+      <!--<ion-button color="default" fill="clear" class="video-play">
+        <ion-icon name="play-outline" slot="end" color="primary"></ion-icon>
+      </ion-button>-->
+      <ion-button color="default" fill="clear">
+        <ion-icon name="close" slot="end" color="danger" (click)="deleteVideo(video.fileName)"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item *ngIf="videoList.length==0">
+      <ion-note expand="block">No Video in local storage.</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,27 @@
+ion-header{
+  font-size: 24px;
+  background-color: #1955b1;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+
+  ion-nav{
+    background: none;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    ion-title{
+      font-size: 25px;
+      margin: 15px 10px 5px 5px;
+
+    }
+
+  }
+
+}
+
+ion-content{
+
+}

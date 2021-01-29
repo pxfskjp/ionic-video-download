@@ -1,0 +1,136 @@
+page-home {
+  ion-header{
+    ion-toolbar{
+      margin: 0;
+      padding: 10px 8px 2px 8px;
+
+      ion-input{
+        background: #ffffff;
+        color: #333333;
+        font-size: 16px;
+        height: 48px;
+        margin-right: 0;
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: calc(100% - 76px);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      ion-button{
+        margin: 0;
+        height: 48px;
+        width: 48px;
+        right: 24px;
+        top: 5px;
+        position: absolute;
+        text-align: center;
+        background-color: #041e6e;
+        color: #ffffff;
+        font-size: 24px;
+        padding-top: 10px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+  }
+
+  ion-content{
+    ion-list-header.list-header-md{
+      margin: 0;
+      padding: 10px 10px 4px 5px;
+      font-size: 1.2em;
+    }
+
+    #task-list ion-list-header{
+      color: #041e6e;
+    }
+    #video-list ion-list-header{
+      color:#f30d0d;
+    }
+    ion-item {
+      margin: 2px 0px 1px;
+
+      .title{
+        color: #041e6e;
+      }
+      .bytes{
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .percent{
+        text-align: center;
+      }
+
+      .input-wrapper{
+        margin-top: 9px;
+      }
+
+    }
+    ion-thumbnail.video-icon,
+    .item-md ion-thumbnail[item-left],
+    .item-md ion-thumbnail[item-start]{
+      background: none;
+      margin: 0 5px 0 0;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+
+      ion-img, img {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 0px
+      }
+    }
+
+    ion-item ion-buttons.bn-group,
+    .item-md [item-end],
+    .item-md [item-right]
+    {
+      width: 72px;
+      height: 48px;
+      padding: 0;
+      margin: 0;
+
+      ion-button{
+        margin: 4px 0 0 0;
+        position: relative;
+        top: 9px;
+        padding: 8px 6px 6px;
+        width: 36px;
+        height: 48px;
+        min-width: 36px;
+        min-height: 48px;
+        border: 1px solid #c8c7cc;
+        font-size: 24px;
+        text-align: center;
+        border: none;
+      }
+
+      ion-button:first-child{
+        color: #30d05f;
+      }
+      ion-button:last-child{
+        color: #f30d0d;
+      }
+    }
+
+    ion-item .label-md {
+      margin: 0 5px 0 0;
+    }
+
+}
+
+
+}
+
+
+
+
